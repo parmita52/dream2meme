@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Dream2Meme",
+  "description": "Convert all instances of dream in a webpage to meme",
+  "icons": {
+    "16": "images/meme16.png",
+    "48": "images/meme48.png",
+    "128": "images/meme128.png"
+  },
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "content_scripts": [{
+    "matches": [
+      "*://*/*"
+    ],
+    "js": [
+      "content.js"
+    ],
+    "run_at": "document_end"
+  }]
+}
