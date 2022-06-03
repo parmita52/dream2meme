@@ -1,14 +1,14 @@
-var elements = document.getElementsByTagName('*');
+let elements = document.getElementsByTagName('*');
 
-for (var i = 0; i < elements.length; i++) {
-  var element = elements[i];
+for (let i = 0; i < elements.length; i++) {
+  let element = elements[i];
 
-  for (var j = 0; j < element.childNodes.length; j++) {
-    var node = element.childNodes[j];
+  for (let j = 0; j < element.childNodes.length; j++) {
+    let node = element.childNodes[j];
 
     if (node.nodeType === 3) {
-      var text = node.nodeValue;
-      var replacedText = text.replace(/dream/gi, 'meme');
+      let text = node.nodeValue;
+      let replacedText = text.replace(/dreamer/gi, 'memer').replace(/dream/gi, 'meme');
 
       if (replacedText !== text) {
         element.replaceChild(document.createTextNode(replacedText), node);
